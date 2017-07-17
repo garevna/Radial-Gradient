@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script src="radialGradient.js"></script>
+   <style>
+    body { background-color: black; color:white; }
+    .sphere {
+        width:250px;
+        height:250px;
+        border-radius:100%;
+        background-image: radial-gradient(circle farthest-corner at 50% 80%, #fff 0%, rgba(255, 0, 0, 0.7) 40%, #300 80%);
+    }
+    nav {
+	      position:fixed;
+	      bottom:0;
+        left:0;
+    }
+   </style>
+</head>
+<div class="sphere" id = "sphere"></div>
+<nav>
+  <button onclick = "color = 1; document.getElementById('sphere').style.background = getRadialGradient ( color, lightFrom );">
+  green
+  </button>
+  <button onclick = "color = 0; document.getElementById('sphere').style.background = getRadialGradient ( color, lightFrom );">
+  red
+  </button>
+  <button onclick = "color = 2; document.getElementById('sphere').style.background = getRadialGradient ( color, lightFrom );">
+  blue
+  </button>
+  <button onclick = "color = [0,1]; document.getElementById('sphere').style.background = getRadialGradient ( color, lightFrom );">
+  yellow
+  </button>
+  <button onclick = "color = [0,2]; document.getElementById('sphere').style.background = getRadialGradient ( color, lightFrom );">
+  magenta
+  </button>
+  <button onclick = "color = [1,2]; document.getElementById('sphere').style.background = getRadialGradient ( color, lightFrom );">
+  cyan
+  </button>
+  
+  light from:
+  <select onchange = "lightFrom = this.value; document.getElementById('sphere').style.background = getRadialGradient ( color, lightFrom );">
+    <option value="center_center">center center</option>
+    <option value="top_center">top center</option>
+    <option value="top_right">top right</option>
+    <option value="top_left">top left</option>
+    <option value="bottom_center">bottom center</option>
+    <option value="bottom_right">bottom right</option>
+    <option value="bottom_left">bottom left</option>
+  </select>
+</nav>
+<script>
+    var color = [1];
+    var lightFrom = "center_center";
+</script>
+</body>
+</html>
