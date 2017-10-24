@@ -1,18 +1,27 @@
 body {
-  margin:0;
-  padding: 5%;
-  background-color:#000;
-  font-family: Tahoma;
+    margin:0;
+    padding: 5%;
+    background-color:#000;
+    font-family: Tahoma;
 }
 nav {
-  position:fixed;
-  bottom:10px;
-  left:10px;
-  font-size:16px;
+    position:fixed;
+    bottom:10px;
+    left:10px;
+    font-size:16px;
 }
 nav button {
-  padding:10px;
-  font-size:16px;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #999;
+    cursor: pointer;
+    text-shadow: -1px -1px 1px rgb(255,255,255);
+}
+nav select {
+    padding: 10px 10px;
+    background-color: #aaa;
+    font-size: 16px;
+    line-height: 45px;
 }
 .sphere {
     width:200px;
